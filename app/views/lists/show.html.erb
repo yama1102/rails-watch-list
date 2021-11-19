@@ -3,6 +3,9 @@
   <%= link_to "Add bookmark", new_list_bookmark_path(@list), class: 'btn btn-info text-center'%>
 </div>
 
+<%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
+      width: 400, height: 300, crop: :fill) %>
+
 <div class="row d-flex justify-content-center">
   <% @list.bookmarks.each do |bookmark| %>
   <div class="card m-3" style="width: 18rem;">
