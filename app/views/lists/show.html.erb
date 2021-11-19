@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h1><%= @list.name %></h1>
+</div>
+
+<div class="row">
+  <% @list.bookmarks.each do |bookmark| %>
+  <div class="p-2 w-50">
+    <img src="<%= bookmark.movie.poster_url %>" alt="">
+    <h3><%= bookmark.movie.title %></h3>
+    <p><%= bookmark.movie.overview %></p>
+    <p><%= bookmark.comment %></p>
+    <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?'} %>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to "Add bookmark", new_list_bookmark_path(@list) %>
+<%= link_to "Back to lists", lists_path %>

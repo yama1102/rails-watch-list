@@ -1,0 +1,14 @@
+
+<div class="banner bg-image w-100 d-flex justify-content-center align-items-center">
+  <h1>Here is to enjoy your pandemic life....</h1>
+</div>
+
+<div class="d-flex m-20 justify-content-center">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+    <div class="card m-3 text-center">
+      <h3><%= list.name %></h3>
+    </div>
+    <% end %>
+  <% end %>
+</div>

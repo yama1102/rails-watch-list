@@ -13,6 +13,17 @@
   </head>
 
   <body>
+    <div style ="height: 70px" class="navbar-lewagon py-2 d-flex justify-content-between text-decoration-none align-items-center">
+      <i class="fas fa-film ml-3"></i>
+      <div style = "width: 200px" class="mr-3">
+        <%= link_to root_path do %>
+          <i class="fas fa-list mr-3"> My lists</i>
+        <% end%>
+        <%= link_to new_list_path do %>
+          <i class="fas fa-clipboard-list mr-3"> New list</i>
+        <% end%>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
